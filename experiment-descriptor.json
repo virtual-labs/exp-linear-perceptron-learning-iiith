@@ -39,7 +39,7 @@
       "source": "assingment.md",
       "label": "Assingment",
       "unit-type": "task",
-      "content-type": "simulation"
+      "content-type": "text"
     },
     {
       "target": "references.html",
