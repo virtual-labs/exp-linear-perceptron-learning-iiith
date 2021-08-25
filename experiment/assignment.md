@@ -1,4 +1,4 @@
-<img src="images/perceptron.png">
+<img src="images/perceptron.png" weight="400" height="400">
 
 Data points are: Negative: (1, 1) (3, 1) (1, 4) Positive: (2, 4) (3, 3) (5, 1). Data points are classified as either +1 or -1. An unknown point is located at (2, 3)(Q 1-4).
 
