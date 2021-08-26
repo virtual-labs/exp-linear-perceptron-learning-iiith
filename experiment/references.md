@@ -6,7 +6,5 @@
 
 4. Learning Applet on the Perceptron Learning Applet.
 
-5. Perceptron tutorials on [Real Intelligence](http://realintelligence.net/tutorials.php?category=ann&tutName=perceptron).
-
-6. Tutorials on multilayer Perceptron MultiLayer Perceptron.
+5. Tutorials on multilayer Perceptron MultiLayer Perceptron.
 
