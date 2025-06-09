@@ -220,8 +220,14 @@ function drawCanvas() {
 canvas.addEventListener("click", function(event) {
   if (trainingComplete) return;
   const rect = canvas.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
+  
+  // Calculate the position in the canvas's coordinate system
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  
+  const x = (event.clientX - rect.left) * scaleX;
+  const y = (event.clientY - rect.top) * scaleY;
+  
   const label = parseInt(document.querySelector('input[name="class"]:checked').value);
   points.push({ x, y, label });
   drawCanvas();
@@ -415,5 +421,12 @@ autoSpeedInput.addEventListener("input", function() {
         autoBtn.textContent = "Automate";
       }
     }, parseInt(autoSpeedInput.value));
+  }
+});
+
+// Handle window resize to ensure canvas is properly displayed
+window.addEventListener('resize', function() {
+  if (points.length > 0 || weights) {
+    drawCanvas();
   }
 });

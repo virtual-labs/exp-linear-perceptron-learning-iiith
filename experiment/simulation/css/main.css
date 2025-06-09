@@ -14,6 +14,7 @@ body {
 }
 
 .container {
+  width: 95%;
   max-width: 950px;
   margin: 30px auto;
   padding: 20px;
@@ -109,6 +110,8 @@ button:hover {
 canvas {
   display: block;
   margin: 25px auto;
+  max-width: 100%;
+  height: auto;
   border: 2px solid #bdc3c7;
   border-radius: 8px;
   background-color: #ecf0f1;
@@ -191,4 +194,88 @@ canvas {
 
 #autoBtn:hover {
   background-color: #2ecc71;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  #controls {
+    display: block;
+  }
+  
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+  
+  .parameters {
+    margin: 15px 0;
+  }
+  
+  .legend {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 98%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  .card {
+    padding: 10px;
+  }
+  
+  #instructions p {
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 7px 12px;
+    font-size: 13px;
+    margin: 3px;
+  }
+  
+  .point-options label,
+  .parameters label {
+    font-size: 14px;
+  }
+  
+  #iterationDisplay {
+    font-size: 16px;
+  }
 }
