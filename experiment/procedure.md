@@ -1,5 +1,4 @@
-
-#Add Train ing Data Points
+# Add Training Data Points
 
 * Click anywhere on the **canvas** to add a training point.
 * Use the **radio buttons** to select the class label:
