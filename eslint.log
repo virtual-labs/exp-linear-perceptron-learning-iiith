@@ -1,0 +1,6 @@
+
+/home/runner/work/exp-linear-perceptron-learning-iiith/exp-linear-perceptron-learning-iiith/experiment/simulation/js/main.js
+  34:9  warning  'isValid' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
