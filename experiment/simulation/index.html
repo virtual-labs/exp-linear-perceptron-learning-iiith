@@ -1,17 +1,67 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Perceptron Learning Simulation</title>
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-		<!-- Your code goes here-->
-	<p><li>This simulation has some <a href="../../../Introduction.html" target="PARENT">software dependencies</a>. We highly recommend you to use our customized <a href="https://vlead.vlabs.ac.in/development/#virtual-box" target="blank">VirtualBox</a> for the smooth running of these simulations.</li></p>
-	<p><li>Click <a href="Exp3.tar.gz">here</a> to open the Experiment for Linux systems</li></p>
-	<p><li>Click <a href="Exp3.zip">here</a> to open the Experiment for Windows</li></p>
+  <div class="container">
+    <header>
+      <h1>Linear Perceptron Learning Simulation</h1>
+      <p class="subtitle">Explore the perceptron algorithm with modern visuals</p>
+    </header>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+    <section id="instructions" class="card">
+      <h2>Instructions</h2>
+      <p><strong>Stage 1:</strong> Click on the canvas to add points. Toggle between Class 1 (red) and Class 2 (blue) using the radio buttons. Click "Start" to initialize the weight vector and "Step" to execute the learning algorithm step by step.</p>
+      <p><strong>Stage 2:</strong> Create different datasets by adjusting the separation between points and observe how this influences convergence.</p>
+      <p><strong>Stage 3:</strong> Adjust the decay rate and automation speed using the sliders to observe their effects on the learning rate and convergence.</p>
+      <p><strong>Stage 4:</strong> Use the "Show Best" button to toggle between showing the current boundary and the best boundary found so far (with the fewest errors).</p>
+    </section>
+
+    <section id="controls" class="card">
+      <div class="point-options">
+        <label>
+          <input type="radio" name="class" value="1" checked>
+          Class 1
+        </label>
+        <label>
+          <input type="radio" name="class" value="2">
+          Class 2
+        </label>
+      </div>
+      <div class="action-buttons">
+        <button id="resetBtn">Reset</button>
+        <button id="startBtn">Start</button>
+        <button id="stepBtn">Step</button>
+        <button id="autoBtn">Automate</button>
+        <button id="showBestBtn">Show Best</button>
+      </div>
+      <div class="parameters">
+        <label for="decayRate">Decay Rate:</label>
+        <input type="range" id="decayRate" min="0" max="1" step="0.01" value="0.05">
+        <span id="decayValue">0.05</span>
+      </div>
+      <div class="parameters">
+        <label for="autoSpeed">Automation Speed (ms):</label>
+        <input type="range" id="autoSpeed" min="100" max="2000" step="100" value="500">
+        <span id="autoSpeedValue">500</span>
+      </div>
+    </section>
+
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div id="iterationDisplay">Iterations: 0</div>
+    
+    <div class="legend">
+      <div class="legend-item"><span class="color-box current"></span>Current Boundary</div>
+      <div class="legend-item"><span class="color-box best"></span>Best Boundary</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
